@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-md-9">
+    <div class="row">
+      <div class="col-12">
+        <h2 style="color: #686868">动态图</h2>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-12  p-3" *ngFor="let i of  [1,23,12,31,4,21,3342,34,23,42,34,23,42,34,2]">
+        <md-card class="item " style="width: 100%">
+          <md-card-title>失去一份工作</md-card-title>
+          <md-card-content>
+            <div
+              [innerHtml]="'如果你得罪了老板，失去的只是一份工作；<br>如果你得罪了客户，失去的不过是一份订单；<br>是的，世上只有一个人可以得罪：你给她脸色看，你冲她发牢骚，你大声顶撞她，甚至当 着她的面摔碗，她都不会记恨你，原因很简单，因为她是你的母亲。'"></div>
+          </md-card-content>
+          <md-card-actions style="border-top: 1px solid #eee" class="text-right">
+            <button md-button>
+              <md-icon svgIcon="more"></md-icon>
+              999
+            </button>
+            <button md-button>
+              <md-icon svgIcon="like" style="color:red"></md-icon>
+              999
+            </button>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-3">
+    <div class="row">
+      <div class="col-12 p-1 fix">
+        <md-list>
+          <h3 md-subheader>Folders</h3>
+          <md-list-item md-list-avatar routerLink="/home" routerLinkActive="active">
+            <h4 md-line>每日推荐</h4>
+            <p md-line > 每天更新最新的热点信息每天... </p>
+          </md-list-item>
+          <md-list-item routerLink="/joke-text" routerLinkActive="active">
+            <h4 md-line>段子</h4>
+            <p md-line> 笑话信息 </p>
+          </md-list-item>
+          <md-list-item routerLink="/joke-gif" routerLinkActive="active">
+            <h4 md-line>动态图</h4>
+            <p md-line> 搞笑邪恶动态图 </p>
+          </md-list-item>
+          <md-list-item routerLink="/game-lol" routerLinkActive="active">
+            <h4 md-line>英雄联盟</h4>
+            <p md-line> 最新解说视频 </p>
+          </md-list-item>
+          <md-list-item routerLink="/top-news" routerLinkActive="active">
+            <h4 md-line>头条</h4>
+            <p md-line> 每天更新最新的热点信息 </p>
+          </md-list-item>
+          <md-divider></md-divider>
+        </md-list>
+      </div>
+    </div>
+
+  </div>
+</div>

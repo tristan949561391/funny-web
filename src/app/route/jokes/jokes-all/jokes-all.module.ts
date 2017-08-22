@@ -1,19 +1,20 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {TopNewsComponent} from "./top-news.component";
 import {RouterModule} from "@angular/router";
-import {MdCardModule} from "@angular/material";
+import {JokesAllComponent} from "./jokes-all.component";
+import {MdCardModule, MdListModule} from "@angular/material";
 
 @NgModule({
   imports: [
     CommonModule,
     MdCardModule,
+    MdListModule,
     RouterModule.forChild([{
       path: '',
-      component: TopNewsComponent
+      component: JokesAllComponent
     }])
   ],
-  declarations: [TopNewsComponent]
+  declarations: [JokesAllComponent]
 })
-export class TopNewsModule {
+export class JokesAllModule {
 }

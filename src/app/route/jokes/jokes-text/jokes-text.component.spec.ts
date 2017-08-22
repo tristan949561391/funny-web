@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JokeGifComponent } from './joke-gif.component';
+import { JokesTextComponent } from './jokes-text.component';
 
-describe('JokeGifComponent', () => {
-  let component: JokeGifComponent;
-  let fixture: ComponentFixture<JokeGifComponent>;
+describe('JokesTextComponent', () => {
+  let component: JokesTextComponent;
+  let fixture: ComponentFixture<JokesTextComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JokeGifComponent ]
+      declarations: [ JokesTextComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JokeGifComponent);
+    fixture = TestBed.createComponent(JokesTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

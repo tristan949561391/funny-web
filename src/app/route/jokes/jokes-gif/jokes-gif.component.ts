@@ -3,10 +3,10 @@ import {MdDialog} from "@angular/material";
 
 @Component({
   selector: 'app-joke-gif',
-  templateUrl: './joke-gif.component.html',
-  styleUrls: ['./joke-gif.component.css']
+  templateUrl: './jokes-gif.component.html',
+  styleUrls: ['./jokes-gif.component.css']
 })
-export class JokeGifComponent implements OnInit {
+export class JokesGifComponent implements OnInit {
 
   constructor(public dialog: MdDialog) {
   }

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {JokeGifComponent} from './joke-gif.component';
+import {JokesGifComponent} from './jokes-gif.component';
 import {RouterModule} from "@angular/router";
 import {MdCardModule, MdDialogModule} from "@angular/material";
 
@@ -11,11 +11,9 @@ import {MdCardModule, MdDialogModule} from "@angular/material";
     MdDialogModule,
     RouterModule.forChild([{
       path: '',
-      component: JokeGifComponent
+      component: JokesGifComponent
     }])
   ],
-  declarations: [JokeGifComponent]
+  declarations: [JokesGifComponent]
 })
-export class JokeGifModule {
-
-}
+export class JokesGifModule {}
