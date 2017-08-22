@@ -1,28 +1,17 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-9 ">
-      <div class="row">
-        <div class="col-12 mb-3" *ngFor="let i of [1,2,3,4,5,6,7]">
-          <div class="card box-shadow">
-            <div class="card-body">
-              <img src="http://img10.ccnxs.cn/uploadfile/hbase/201708/0821/HBC599AC4389FEEA_thumb_255_150.jpeg">
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="row mr-1">
+    <div class="col-md-12">
+      <h2 style="color: #686868">问下</h2>
     </div>
-    <div class="col-md-3 p-0">
-      <div class="list-group rounded  box-shadow">
-        <div class="list-group-item">
-          <div class="card-body">12312312</div>
-        </div>
-        <div class="list-group-item"> ddd</div>
-        <div class="list-group-item"> ddd</div>
-        <div class="list-group-item"> ddd</div>
-        <div class="list-group-item"> ddd</div>
-        <div class="list-group-item"> ddd</div>
-        <div class="list-group-item"> ddd</div>
-      </div>
+    <div class="col-md-2 p-0 pl-3 pt-3" *ngFor="let i of [1,2,3,4,5,6,7,2,13,1,23,12,3,12,31,23]">
+      <md-card class="item " style="width: 100%">
+        <img md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+        <md-card-content>
+          <p>
+            The Shiba Inu is the
+          </p>
+        </md-card-content>
+      </md-card>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HomeComponent} from './home.component';
+import {JokeTextComponent} from "./joke-text.component";
 import {RouterModule} from "@angular/router";
 import {MdCardModule} from "@angular/material";
 
@@ -9,13 +9,12 @@ import {MdCardModule} from "@angular/material";
     CommonModule,
     MdCardModule,
     RouterModule.forChild([
-      {
-        path: '',
-        component: HomeComponent
-      }
+      {path: '', component: JokeTextComponent}
     ])
   ],
-  declarations: [HomeComponent]
+  declarations: [JokeTextComponent]
 })
-export class HomeModule {
+export class JokeTextModule {
+
 }
+

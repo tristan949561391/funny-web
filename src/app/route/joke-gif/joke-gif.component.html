@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row m-lg-5 m-md-3 m-sm-1">
+    <div class="col-12">
+      <h2 style="color: #686868">动态图</h2>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 p-3"
+         *ngFor="let i of [1,2,3,4,5,6,7,2,13,1,23,12,3,12,31,23,12,31,23,12,3,12,31,2,12,4,1,231,23,12,31,231,23,12,31,4,23,423,4,12,312,31,2,31,41,23,12,41,21,412,4]">
+      <md-card class="item " style="width: 100%" (click)="openDetail(dia)">
+        <img md-card-image height="160" width="auto"
+             [src]="i%2==0?'https://image.uczzd.cn/9788828387506548678.jpg?id=0&from=export&width=170&height=109':'https://material.angular.io/assets/img/examples/shiba2.jpg'">
+        <md-card-content>
+          The Shiba Inu is the
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #dia>
+  <div class="container-fluid">
+    <div class="row ">
+      <md-card class="item " style="width: 100%" >
+        <md-card-content>
+          The Shiba Inu is the
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</ng-template>
