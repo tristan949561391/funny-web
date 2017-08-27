@@ -15,11 +15,11 @@ import {MdButtonModule, MdCardModule, MdIconModule, MdToolbarModule} from "@angu
       {
         path: '', component: JokesComponent, children: [
         {path: '', redirectTo: 'all', pathMatch: 'full'},
-        {path: 'all', loadChildren: './jokes-all/jokes-all.module#JokesAllModule'},
-        {path: 'gif', loadChildren: './jokes-gif/jokes-gif.module#JokesGifModule'},
-        {path: 'pic', loadChildren: './jokes-pic/jokes-pic.module#JokesPicModule'},
-        {path: 'text', loadChildren: './jokes-text/jokes-text.module#JokesTextModule'},
-        {path: 'video', loadChildren: './jokes-video/jokes-video.module#JokesVideoModule'}
+        {path: ':type', loadChildren: './jokes-all/jokes-all.module#JokesAllModule'},
+        // {path: 'gif', loadChildren: './jokes-gif/jokes-gif.module#JokesGifModule'},
+        // {path: 'pic', loadChildren: './jokes-pic/jokes-pic.module#JokesPicModule'},
+        // {path: 'text', loadChildren: './jokes-text/jokes-text.module#JokesTextModule'},
+        // {path: 'video', loadChildren: './jokes-video/jokes-video.module#JokesVideoModule'}
       ]
       }
     ])

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-jokes-all',
@@ -7,7 +8,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class JokesAllComponent implements OnInit {
 
-  constructor() {
+  private type:string;
+
+  constructor(private  route:Router,private activeRoute:ActivatedRoute) {
+    this.type=this.activeRoute.snapshot.paramMap.get('type');
+
+
+
+
   }
   ngOnInit() {
   }
