@@ -7,14 +7,14 @@ import {JokerService} from "../../../service/joker.service";
   templateUrl: './jokes-all.component.html',
   styleUrls: ['./jokes-all.component.css']
 })
-export class JokesAllComponent implements OnInit, OnChanges {
+export class JokesAllComponent implements OnInit {
 
-  ngOnChanges(changes: SimpleChanges): void {
 
-  }
 
   private type: number = null;
   private pagework: { pageNum: number, pageSize: number } = {pageNum: 0, pageSize: 10};
+
+  title:string='全部';
 
   list: Array<any> = new Array();
 
@@ -42,6 +42,13 @@ export class JokesAllComponent implements OnInit, OnChanges {
       })
     })
 
+  }
+
+
+
+
+  onScroll($event){
+    console.log($event)
   }
 
 
