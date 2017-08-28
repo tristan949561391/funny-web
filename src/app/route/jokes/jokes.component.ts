@@ -10,10 +10,7 @@ import {DomSanitizer} from "@angular/platform-browser";
 export class JokesComponent implements OnInit {
 
   constructor(iconRepository: MdIconRegistry, sanitizer: DomSanitizer) {
-    iconRepository.addSvgIcon(
-      'like',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/icon/like.svg'))
-      .addSvgIcon('more', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/more.svg'));
+    iconRepository
   }
 
   ngOnInit() {

@@ -9,8 +9,9 @@ import {DomSanitizer} from "@angular/platform-browser";
 })
 export class AppComponent {
   constructor(private iconRepository: MdIconRegistry, sanitizer: DomSanitizer) {
-    iconRepository.addSvgIcon(
-      'scroll-top',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/icon/scroll_top.svg'));
+    iconRepository
+      .addSvgIcon('scroll-top', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/scroll_top.svg'))
+      .addSvgIcon('like', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/like.svg'))
+      .addSvgIcon('more', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/more.svg'));
   }
 }

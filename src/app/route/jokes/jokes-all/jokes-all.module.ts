@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from "@angular/router";
 import {JokesAllComponent} from "./jokes-all.component";
 import {MdButtonModule, MdCardModule, MdIconModule, MdListModule} from "@angular/material";
+import {HttpModule} from "@angular/http";
+
 
 @NgModule({
   imports: [
@@ -11,6 +13,7 @@ import {MdButtonModule, MdCardModule, MdIconModule, MdListModule} from "@angular
     MdListModule,
     MdIconModule,
     MdButtonModule,
+    HttpModule,
     RouterModule.forChild([{
       path: '',
       component: JokesAllComponent

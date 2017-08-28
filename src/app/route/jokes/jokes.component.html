@@ -1,10 +1,10 @@
 <md-toolbar class="fixed-top bg-transparent">
   <div class="container text-center">
-    <button md-button class="rout-nav" routerLink="all" routerLinkActive="bg-danger">全部</button>
-    <button md-button  class="rout-nav" routerLink="text" routerLinkActive="bg-danger">笑话</button>
-    <button md-button  class="rout-nav" routerLink="pic" routerLinkActive="bg-danger">搞笑图</button>
-    <button md-button  class="rout-nav" routerLink="gif" routerLinkActive="bg-danger">动态图</button>
-    <button md-button  class="rout-nav" routerLink="video" routerLinkActive="bg-danger">视频</button>
+    <button md-button class="rout-nav" [routerLink]="['/jokes/list','all']" routerLinkActive="bg-danger">全部</button>
+    <button md-button class="rout-nav" [routerLink]="['/jokes/list','text']" routerLinkActive="bg-danger">笑话</button>
+    <button md-button class="rout-nav" [routerLink]="['/jokes/list','pic']" routerLinkActive="bg-danger">搞笑图</button>
+    <button md-button class="rout-nav" [routerLink]="['/jokes/list','gif']" routerLinkActive="bg-danger">动态图</button>
+    <button md-button class="rout-nav" [routerLink]="['/jokes/list','video']" routerLinkActive="bg-danger">视频</button>
   </div>
 </md-toolbar>
 <router-outlet></router-outlet>

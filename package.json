@@ -6,6 +6,7 @@
     "ng": "ng",
     "compass": "compass watch",
     "start": "ng serve",
+    "watch": "compass watch",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

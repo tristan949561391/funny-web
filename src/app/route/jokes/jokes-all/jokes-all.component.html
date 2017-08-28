@@ -6,12 +6,15 @@
       </div>
     </div>
     <div class="row ">
-      <div class="col-12  p-3" *ngFor="let i of  [1,23,12,31,4,21,3342,34,23,42,34,23,42,34,2]">
+      <div class="col-12  p-3" *ngFor="let item of  list">
         <md-card class="item " style="width: 100%">
-          <md-card-title>失去一份工作</md-card-title>
+          <md-card-title ><h5 [innerHtml]="item.title"></h5></md-card-title>
           <md-card-content>
-            <div
-              [innerHtml]="'如果你得罪了老板，失去的只是一份工作；<br>如果你得罪了客户，失去的不过是一份订单；<br>是的，世上只有一个人可以得罪：你给她脸色看，你冲她发牢骚，你大声顶撞她，甚至当 着她的面摔碗，她都不会记恨你，原因很简单，因为她是你的母亲。'"></div>
+            <div *ngIf="item.text"
+                 [innerHtml]="item.text"></div>
+          </md-card-content>
+          <md-card-content class="text-center">
+            <img class="img-fluid" *ngFor="let pic of item.pics" [src]="pic">
           </md-card-content>
           <md-card-actions style="border-top: 1px solid #eee" class="text-right">
             <button md-button>
@@ -21,8 +24,14 @@
             <button md-button>
               <md-icon svgIcon="more"></md-icon>
             </button>
+            <button class="float-left" md-button>{{item.create_time|date:'MM月dd日 HH:mm'}}</button>
           </md-card-actions>
         </md-card>
+      </div>
+      <div class="col-12 text-center">
+        <button md-button (click)="getJokeList()">加载更多
+          <md-icon svgIcon="more"></md-icon>
+        </button>
       </div>
     </div>
 
@@ -34,7 +43,7 @@
           <h3 md-subheader>Folders</h3>
           <md-list-item md-list-avatar routerLink="/home" routerLinkActive="active">
             <h4 md-line>每日推荐</h4>
-            <p md-line > 每天更新最新的热点信息每天... </p>
+            <p md-line> 每天更新最新的热点信息每天... </p>
           </md-list-item>
           <md-list-item routerLink="/joke-text" routerLinkActive="active">
             <h4 md-line>段子</h4>
