@@ -4,7 +4,6 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppRoute} from "./app.route";
-import {Ng2BootstrapModule} from "ngx-bootstrap";
 import 'hammerjs';
 import {MdButtonModule, MdCardModule, MdIconModule, MdListModule, MdSidenavModule} from "@angular/material";
 import {HttpModule} from "@angular/http";
@@ -21,7 +20,6 @@ import {FloatBtnsComponent} from "./sub/float-btns/float-btns.component";
     BrowserModule,
     HttpModule,
     BrowserAnimationsModule,
-    Ng2BootstrapModule.forRoot(),
     AppRoute,
     MdSidenavModule,
     MdButtonModule,
