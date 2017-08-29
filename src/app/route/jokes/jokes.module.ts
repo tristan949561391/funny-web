@@ -16,14 +16,15 @@ import {ServiceModule} from "../../service/service.module";
     RouterModule.forChild([
       {
         path: '', component: JokesComponent, children: [
-        {path: '', redirectTo: 'list/all', pathMatch: 'full'},
-        {path: 'list/:type', loadChildren: './jokes-all/jokes-all.module#JokesAllModule'}
+        {path: '', redirectTo: 'all', pathMatch: 'full'},
+        {path: ':type', loadChildren: './jokes-all/jokes-all.module#JokesAllModule'}
       ]
       }
     ])
   ],
   declarations: [JokesComponent]
 })
+
 export class JokesModule {
 
 }

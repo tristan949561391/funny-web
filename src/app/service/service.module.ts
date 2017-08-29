@@ -7,4 +7,5 @@ import {JokerService} from "./joker.service";
   providers: [JokerService]
 })
 export class ServiceModule {
+
 }
