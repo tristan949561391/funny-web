@@ -13,8 +13,14 @@ export class JokerService {
       filter: filter,
       sort: sort || {'create_time': -1}
     };
-    return this.http.post("http://localhost:3000", params).map(res => res.json());
+    return this.http.post("http://localhost:3000/jokes/list", params).map(res => res.json());
   }
 
+  getAllTypes() {
+    return this.http.post("http://localhost:3000/jokes/type/list", {}).map(res => res.json());
+  }
 
+  praiseJoke(_id: string) {
+    return this.http.post("http://localhost:3000/jokes/praise/" + _id, {}).map(res => res.json());
+  }
 }

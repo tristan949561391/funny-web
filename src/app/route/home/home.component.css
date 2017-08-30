@@ -7,8 +7,3 @@
 .example-header-image {
   background-size: cover;
 }
-
-/* line 9, home.component.scss */
-.item {
-  cursor: pointer;
-}

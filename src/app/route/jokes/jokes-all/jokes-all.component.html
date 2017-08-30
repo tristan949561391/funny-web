@@ -1,71 +1,43 @@
-<div class="row">
-  <div class="col-md-9">
-    <div class="row">
-      <div class="col-12">
-        <h2 style="color: #686868">{{title}}</h2>
-      </div>
-    </div>
-
-    <div class="row " (scroll)="onScroll($event)">
-      <div class="col-12  p-3" *ngFor="let item of  list">
-        <md-card class="item " style="width: 100%">
-          <md-card-title ><h5 [innerHtml]="item.title"></h5></md-card-title>
-          <md-card-content>
-            <div *ngIf="item.text"
-                 [innerHtml]="item.text"></div>
-          </md-card-content>
-          <md-card-content class="text-center">
-            <img class="img-fluid" *ngFor="let pic of item.pics" [src]="pic">
-          </md-card-content>
-          <md-card-actions style="border-top: 1px solid #eee" class="text-right">
-            <button md-button>
-              <md-icon svgIcon="like"></md-icon>
-              999
-            </button>
-            <button md-button>
-              <md-icon svgIcon="more"></md-icon>
-            </button>
-            <button class="float-left" md-button>{{item.create_time|date:'MM月dd日 HH:mm'}}</button>
-          </md-card-actions>
-        </md-card>
-      </div>
-      <div class="col-12 text-center">
-        <button md-button (click)="getJokeList()">加载更多
-          <md-icon svgIcon="more"></md-icon>
-        </button>
-      </div>
-    </div>
-
-  </div>
-  <div class="col-md-3">
-    <div class="row">
-      <div class="col-12 p-1 fix">
-        <md-list>
-          <h3 md-subheader>Folders</h3>
-          <md-list-item md-list-avatar routerLink="/home" routerLinkActive="active">
-            <h4 md-line>每日推荐</h4>
-            <p md-line> 每天更新最新的热点信息每天... </p>
-          </md-list-item>
-          <md-list-item routerLink="/joke-text" routerLinkActive="active">
-            <h4 md-line>段子</h4>
-            <p md-line> 笑话信息 </p>
-          </md-list-item>
-          <md-list-item routerLink="/joke-gif" routerLinkActive="active">
-            <h4 md-line>动态图</h4>
-            <p md-line> 搞笑邪恶动态图 </p>
-          </md-list-item>
-          <md-list-item routerLink="/game-lol" routerLinkActive="active">
-            <h4 md-line>英雄联盟</h4>
-            <p md-line> 最新解说视频 </p>
-          </md-list-item>
-          <md-list-item routerLink="/top-news" routerLinkActive="active">
-            <h4 md-line>头条</h4>
-            <p md-line> 每天更新最新的热点信息 </p>
-          </md-list-item>
-          <md-divider></md-divider>
-        </md-list>
-      </div>
-    </div>
-
-  </div>
+<div class="col-md-12">
+  <md-card class="col-12 m-0 mb-4" *ngFor="let item of  jokesList">
+    <md-card-title><h5 [innerHtml]="item.title"></h5></md-card-title>
+    <md-card-content>
+      <div *ngIf="item.text"
+           [innerHtml]="item.text"></div>
+    </md-card-content>
+    <md-card-content class="text-center">
+      <img class="img-fluid " *ngFor="let pic of item.pics" [src]="pic">
+    </md-card-content>
+    <md-card-actions style="border-top: 1px solid #eee" class="text-right">
+      <button md-button (click)="praiseJoke(item)" mdTooltip="{{item.isPraise?'已赞':''}}"
+              [disabled]="item.isPraise"
+              [tooltip-position]="'above'">
+        <md-icon svgIcon="like" [ngClass]="{'text-danger':item.isPraise}"></md-icon>
+        {{item.praise?item.praise:0}}
+      </button>
+      <button md-button [mdMenuTriggerFor]="menu">
+        <md-icon svgIcon="share"></md-icon>
+        分享
+        <md-menu #menu="mdMenu" yPosition="above" xPosition="before">
+          <button md-menu-item (click)="sharetoqq(item,'localhost/index.html')">
+            <span>QQ空间</span>
+          </button>
+          <button md-menu-item disabled>
+            <span>Check voicemail</span>
+          </button>
+          <button md-menu-item>
+            <span>Disable alerts</span>
+          </button>
+        </md-menu>
+      </button>
+      <button class="float-left" md-button>{{item.create_time|date:'MM月dd日 HH:mm'}}</button>
+    </md-card-actions>
+  </md-card>
 </div>
+<div class="col-md-12 text-center">
+  <button md-button (click)="getJokeList()">
+    <md-spinner></md-spinner>
+  </button>
+</div>
+
+

@@ -12,6 +12,8 @@ export class AppComponent {
     iconRepository
       .addSvgIcon('scroll-top', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/scroll_top.svg'))
       .addSvgIcon('like', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/like.svg'))
-      .addSvgIcon('more', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/more.svg'));
+      .addSvgIcon('more', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/more.svg'))
+      .addSvgIcon('share', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/share.svg'))
+      .addSvgIcon('more-v', sanitizer.bypassSecurityTrustResourceUrl('assets/icon/more-v.svg'));
   }
 }

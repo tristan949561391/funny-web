@@ -16,7 +16,7 @@ import {ServiceModule} from "../../service/service.module";
     RouterModule.forChild([
       {
         path: '', component: JokesComponent, children: [
-        {path: '', redirectTo: 'all', pathMatch: 'full'},
+        {path: '', redirectTo: '0;title=全部', pathMatch: 'full'},
         {path: ':type', loadChildren: './jokes-all/jokes-all.module#JokesAllModule'}
       ]
       }
@@ -24,8 +24,6 @@ import {ServiceModule} from "../../service/service.module";
   ],
   declarations: [JokesComponent]
 })
-
 export class JokesModule {
-
 }
 
